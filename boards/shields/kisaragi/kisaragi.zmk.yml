@@ -1,0 +1,11 @@
+
+file_format: "1"
+id: kisaragi
+name: kisaragi
+type: shield
+features:
+  - keys
+  - studio
+outputs:
+  - usb
+  - ble

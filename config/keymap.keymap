@@ -1,0 +1,81 @@
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        base {
+            // ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┐
+            // │  Q  │  W  │  E  │  R  │  T  │  Y  │  U  │
+            // ├─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+            // │  A  │  S  │  D  │  F  │  G  │  H  │  J  │
+            // ├─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+            // │  Z  │  X  │  C  │  V  │  B  │  N  │  M  │
+            // ├─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+            // │ Ctrl│ Alt │ Cmd │Lower│Space│Raise│Enter│
+            // └─────┴─────┴─────┴─────┴─────┴─────┴─────┘
+            bindings = <
+                &kp Q       &kp W       &kp E       &kp R       &kp T       &kp Y       &kp U
+                &kp A       &kp S       &kp D       &kp F       &kp G       &kp H       &kp J
+                &kp Z       &kp X       &kp C       &kp V       &kp B       &kp N       &kp M
+                &kp LCTRL   &kp LALT    &kp LCMD    &mo 1       &kp SPACE   &mo 2       &kp ENTER
+            >;
+        };
+
+        lower {
+            // ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┐
+            // │  1  │  2  │  3  │  4  │  5  │  6  │  7  │
+            // ├─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+            // │  !  │  @  │  #  │  $  │  %  │  ^  │  &  │
+            // ├─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+            // │  -  │  =  │  [  │  ]  │  \  │  ;  │  '  │
+            // ├─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+            // │ Ctrl│ Alt │ Cmd │ --- │Space│Raise│Enter│
+            // └─────┴─────┴─────┴─────┴─────┴─────┴─────┘
+            bindings = <
+                &kp N1      &kp N2      &kp N3      &kp N4      &kp N5      &kp N6      &kp N7
+                &kp EXCL    &kp AT      &kp HASH    &kp DLLR    &kp PRCNT   &kp CARET   &kp AMPS
+                &kp MINUS   &kp EQUAL   &kp LBKT    &kp RBKT    &kp BSLH    &kp SEMI    &kp SQT
+                &kp LCTRL   &kp LALT    &kp LCMD    &trans      &kp SPACE   &mo 2       &kp ENTER
+            >;
+        };
+
+        raise {
+            // ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┐
+            // │  8  │  9  │  0  │  -  │  =  │Bkspc│ Del │
+            // ├─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+            // │  *  │  (  │  )  │  _  │  +  │ Left│Right│
+            // ├─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+            // │  ,  │  .  │  /  │  `  │  ~  │ Up  │Down │
+            // ├─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+            // │ Ctrl│ Alt │ Cmd │Lower│Space│ --- │Enter│
+            // └─────┴─────┴─────┴─────┴─────┴─────┴─────┘
+            bindings = <
+                &kp N8      &kp N9      &kp N0      &kp MINUS   &kp EQUAL   &kp BSPC    &kp DEL
+                &kp ASTRK   &kp LPAR    &kp RPAR    &kp UNDER   &kp PLUS    &kp LEFT    &kp RIGHT
+                &kp COMMA   &kp DOT     &kp FSLH    &kp GRAVE   &kp TILDE   &kp UP      &kp DOWN
+                &kp LCTRL   &kp LALT    &kp LCMD    &mo 1       &kp SPACE   &trans      &kp ENTER
+            >;
+        };
+
+        adjust {
+            // ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┐
+            // │ F1  │ F2  │ F3  │ F4  │ F5  │ F6  │ F7  │
+            // ├─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+            // │ F8  │ F9  │ F10 │ F11 │ F12 │Vol- │Vol+ │
+            // ├─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+            // │Reset│     │     │     │     │Prev │Next │
+            // ├─────┼─────┼─────┼─────┼─────┼─────┼─────┤
+            // │ Ctrl│ Alt │ Cmd │ --- │Space│ --- │Enter│
+            // └─────┴─────┴─────┴─────┴─────┴─────┴─────┘
+            bindings = <
+                &kp F1      &kp F2      &kp F3      &kp F4      &kp F5      &kp F6      &kp F7
+                &kp F8      &kp F9      &kp F10     &kp F11     &kp F12     &kp C_VOL_DN &kp C_VOL_UP
+                &bootloader &none       &none       &none       &none       &kp C_PREV  &kp C_NEXT
+                &kp LCTRL   &kp LALT    &kp LCMD    &trans      &kp SPACE   &trans      &kp ENTER
+            >;
+        };
+    };
+};

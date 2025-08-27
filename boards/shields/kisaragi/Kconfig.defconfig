@@ -1,0 +1,7 @@
+
+if SHIELD_KISARAGI
+
+config ZMK_KEYBOARD_NAME
+    default "Kisaragi"
+
+endif
