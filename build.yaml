@@ -1,5 +1,7 @@
 include:
-  - board: bmp_boost
+  - board: nice_nano_v2
     shield: kisaragi
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y
+  - board: bmp_boost
+    shield: kisaragi
